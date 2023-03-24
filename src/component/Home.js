@@ -41,6 +41,13 @@ export default function Home() {
         checkLogin= false
     }
     
+    const handleSort = () => {
+        const newCategory = categoryLoad.map(cat => ({
+            ...cat,
+            Movie: [...cat.Movie].sort((a,b) => a.AvgRating - b.AvgRating)
+          }));
+          setCategoryLoad(newCategory);
+    }
 
     return (
 
@@ -64,7 +71,7 @@ export default function Home() {
                 <div className="col-md-10">
 
                     <h1 style={{ color: "red" }}> Danh sách phim</h1> <hr />
-
+                      <button onClick={handleSort}>sort</button>  
 
                     <div className="row">
                         {categoryLoad.map((category) => (

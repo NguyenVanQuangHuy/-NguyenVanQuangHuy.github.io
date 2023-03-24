@@ -18,6 +18,7 @@ export default function Register() {
         const Address = document.getElementById('Address').value;
         const Email = document.getElementById('InputEmail1').value;
         const Password = document.getElementById('InputPassword').value;
+        const Repassword = document.getElementById('InputPassword2').value;
         const radios = document.getElementsByName('option');
         const ID = account.length+1;
         let value;
@@ -32,6 +33,9 @@ export default function Register() {
         const checkexit = account.filter((a) => a.Email == Email);
         if (checkexit.length > 0) {
             alert('Email already exit!!!');
+        }
+        else if(Password !== Repassword){
+            alert('Password and Repassword not same!!!');
         }
         else {
             const newaccount = { ID,FullName, Email, Password, Gender: value,Address };
@@ -63,6 +67,10 @@ export default function Register() {
                         <div className="form-group">
                             <label for="InputPassword1">Password</label>
                             <input type="password" className="form-control" id="InputPassword" placeholder="Enter password" pattern="[a-zA-Z0-9_@]{8,15}" required />
+                        </div>
+                        <div className="form-group">
+                            <label for="InputPassword2">Repassword</label>
+                            <input type="password" className="form-control" id="InputPassword2" placeholder="Enter password" pattern="[a-zA-Z0-9_@]{8,15}" required />
                         </div>
                         <div className="form-check form-check-inline">
                             <input className="form-check-input" type="radio" name="option" id="inlineRadio1" value="male" required />
