@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import { createContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Category from './Json/Movie.json'
-localStorage.setItem("Category",JSON.stringify(Category))
 import ListAccount from './Json/Account.json'
+localStorage.setItem("Category",JSON.stringify(Category))
 const Context = createContext();
 export default function Provider({ children })
 

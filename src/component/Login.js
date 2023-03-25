@@ -25,24 +25,26 @@ export default function Login() {
 
     }
     return (
+       <div className="cbody">
         <div className="container">
-            <div className="row align-items-center justify-content-center ">
-                <div className="loginform col-md-12 ">
+            <div className="row justify-content-center align-items-center">
+                <div className="loginform col-md-6 ">
                 <form>
-                <h3 className="">Login</h3>
+                <h3 className="text">Login</h3>
                 <div className="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                    <label for="exampleInputEmail1" className="text textform">Email address</label>
+                    <input type="email" className="form-control f11" id="InputEmail1" aria-describedby="emailHelp"/>
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" className="form-control" id="InputPassword" placeholder="Enter password"/>
+                    <label for="exampleInputPassword1" className="text textform">Password</label>
+                    <input type="password" className="form-control f11" id="InputPassword"/>
                 </div>
-                <button type="button" className="btn btn-primary" onClick={checkAccount}>Submit</button>
+                <button type="button" className="btn btn-primary" onClick={checkAccount}>Sign In</button>
             </form>
                 </div>
 
             </div>
         </div>
+       </div>
     )
 }
